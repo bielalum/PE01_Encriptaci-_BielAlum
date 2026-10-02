@@ -4,7 +4,7 @@ public class ClasseCriptografica {
                                 //String missatge: Frase sencera a xifrar
     public static String encripta(String missatge, String clau){
 
-        //Declaro les variables per a cada dígit de la clau i els assigno una posició
+        //Declaro les variables per a cada dígit de la clau i els hi assigno una posició
         int digit1 = Character.getNumericValue(clau.charAt(0));
         int digit2 = Character.getNumericValue(clau.charAt(1));
 
@@ -13,20 +13,21 @@ public class ClasseCriptografica {
         String resultat = "";
         boolean esLletra = true;
 
+        //Bucle for per recórrer cada caràcter del missatge
         for(int i = 0; i < missatge.length(); i++){
 
             //Creo un char per a la lletra i li assigno el número corresponent a la posició en el missatge
             char lletraOriginal = missatge.charAt(i);  //H -> 1
 
 
-            //Comprovem si el caràcter és una lletra o no, i ho diem al boolean
+            //Abans de tot, comprovem si el caràcter és una lletra o no, i ho diem al boolean
             if (Character.isLetter(lletraOriginal)) {
                 esLletra = true;
 
                 int digitClau;
 
 
-                //Si la posició de la lletra és senar, li assignem el dígit 1, si és parell el dígit 2
+                //Si la posició de la lletra és imparella, li assignem el dígit 1, si és parella el dígit 2
 
                 //Si el residu de dividir entre 2 no és 0...
                 if (posicioLletra % 2 != 0) {
@@ -122,7 +123,7 @@ public class ClasseCriptografica {
                 int digitClau;
 
 
-                //Si la posició de la lletra és senar, li assignem el dígit 1, si és parell el dígit 2
+                //Si la posició de la lletra és imparella, li assignem el dígit 1, si és parella el dígit 2
 
                 //Si el residu de dividir entre 2 no és 0...
                 if (posicioLletra % 2 != 0) {

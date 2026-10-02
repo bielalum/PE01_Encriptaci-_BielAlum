@@ -1,7 +1,7 @@
 package XifratPropi;
 public class ClasseCriptografica {
 
-                                //String missatge: Frase sencera a xifrar
+                                
     public static String encripta(String missatge, String clau){
 
         //Declaro les variables per a cada dígit de la clau i els hi assigno una posició
@@ -13,6 +13,7 @@ public class ClasseCriptografica {
         String resultat = "";
         boolean esLletra = true;
 
+        
         //Bucle for per recórrer cada caràcter del missatge
         for(int i = 0; i < missatge.length(); i++){
 
@@ -65,7 +66,7 @@ public class ClasseCriptografica {
                 int posicioLletraXifrada = (posicioOriginalLletra + posicionsADesplacar) % 26; //El %26 és perquè torni a començar si en desplaçar s'acaba l'abecedari
 
 
-                //Ara sabem la posició final en la qual està la lletra xifrada, ara cal passar-la a codi ASCII
+                //Ara que sabem la posició final en la qual està la lletra xifrada, cal passar-la a codi ASCII
                 int posicioASCIIFinal = lletraInicialAbecedari + posicioLletraXifrada;
 
 
@@ -134,7 +135,7 @@ public class ClasseCriptografica {
                 }
 
 
-                //Cream un char per assignar la primera lletra de l'abecedari en majúscula o en minúscula (A o a), en funció de si la lletra del missatge a xifrar és majúscula o minúscula
+                //Creo un char per assignar la primera lletra de l'abecedari en majúscula o en minúscula (A o a), en funció de si la lletra del missatge a xifrar és majúscula o minúscula
                 char lletraInicialAbecedari;
                 
                 if (Character.isUpperCase(lletraXifrada)){

@@ -3,7 +3,7 @@ package AES;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
-import javax.crypto.Cipher;
+import javax.crypto.Cipher; //Classe que conté la lògica i les formules per xifrar i desxifrar
 import javax.crypto.spec.SecretKeySpec;
 
 public class ClasseAES {
